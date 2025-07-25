@@ -2,11 +2,11 @@ GITHUB_CLIENT_ID=<your github client id>
 GITHUB_CLIENT_SECRET=<your github client secret>
 COOKIE_ENCRYPTION_KEY=<your cookie cookie encryption key>
 
-# Add your Anthropic API key below for PRP parsing functionality
-# ANTHROPIC_API_KEY=<your Anthropic API key>
+# Add your Google API key below for PRP parsing functionality
+# GOOGLE_API_KEY=<your Google API key>
 
-# Optional: Override the default Anthropic model (defaults to claude-3-5-haiku-latest)
-# ANTHROPIC_MODEL=claude-3-5-haiku-latest
+# Optional: Override the default Google model (defaults to gemini-1.5-pro)
+# GOOGLE_MODEL=gemini-1.5-pro
 
 # Database Connection String
 # This should be a PostgreSQL connection string with full read/write permissions

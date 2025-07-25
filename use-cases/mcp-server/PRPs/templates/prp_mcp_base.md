@@ -88,7 +88,7 @@ Build a production-ready MCP (Model Context Protocol) server with:
   why: Core MCP development patterns, security practices, and error handling
 
 # Critial code examples
-- docfile: PRPs/ai_docs/claude_api_usage.md
+- docfile: PRPs/ai_docs/gemini_api_usage.md
   why: How to use the Anthropic API to get a response from an LLM
 
 # TOOL REGISTRATION SYSTEM - Understand the modular approach

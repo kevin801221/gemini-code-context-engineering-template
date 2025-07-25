@@ -142,12 +142,12 @@ This use case includes specialized context engineering components designed speci
 
 ### Specialized Slash Commands
 
-Located in `.claude/commands/`:
+Located in `.gemini/commands/`:
 
 - **`/prp-mcp-create`** - Generates PRPs specifically for MCP servers
 - **`/prp-mcp-execute`** - Executes MCP PRPs with comprehensive validation
 
-These are specialized versions of the generic commands in the root `.claude/commands/`, but tailored for MCP development patterns.
+These are specialized versions of the generic commands in the root `.gemini/commands/`, but tailored for MCP development patterns.
 
 ### Specialized PRP Template
 
@@ -164,7 +164,7 @@ The template `PRPs/templates/prp_mcp_base.md` includes:
 The `PRPs/ai_docs/` folder contains:
 
 - **`mcp_patterns.md`** - Core MCP development patterns and security practices
-- **`claude_api_usage.md`** - How to integrate with Anthropic's API for LLM-powered features
+- **`gemini_api_usage.md`** - How to integrate with Google's API for LLM-powered features
 
 ## 🔧 Template Architecture
 
@@ -208,8 +208,8 @@ To fully understand this use case, examine these files:
 ### Context Engineering Components
 
 - **`PRPs/templates/prp_mcp_base.md`** - Specialized MCP PRP template
-- **`.claude/commands/prp-mcp-create.md`** - MCP-specific PRP generation
-- **`.claude/commands/prp-mcp-execute.md`** - MCP-specific execution
+- **`.gemini/commands/prp-mcp-create.md`** - MCP-specific PRP generation
+- **`.gemini/commands/prp-mcp-execute.md`** - MCP-specific execution
 
 ### Implementation Patterns
 
@@ -221,7 +221,7 @@ To fully understand this use case, examine these files:
 
 - **`wrangler.jsonc`** - Cloudflare Workers configuration
 - **`.dev.vars.example`** - Environment variable template
-- **`CLAUDE.md`** - Implementation guidelines and patterns
+- **`GEMINI.md`** - Implementation guidelines and patterns
 
 ## 📈 Success Metrics
 

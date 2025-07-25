@@ -34,7 +34,7 @@ git clone https://github.com/coleam00/Context-Engineering-Intro.git
 cd Context-Engineering-Intro
 
 # 2. 設定您的專案規則（可選 - 已提供模板）
-# 編輯 CLAUDE.md 以新增專案特定的指導原則
+# 編輯 GEMINI.md 以新增專案特定的指導原則
 
 # 3. 新增範例（強烈建議）
 # 在 examples/ 資料夾中放置相關程式碼範例
@@ -137,17 +137,17 @@ graph TD
 
 ```
 context-engineering-intro/
-├── .claude/
+├── .gemini/
 │   ├── commands/
 │   │   ├── generate-prp.md    # 生成全面的 PRPs
 │   │   └── execute-prp.md     # 執行 PRPs 來實現功能
-│   └── settings.local.json    # Claude Code 權限
+│   └── settings.local.json    # Gemini Code 權限
 ├── PRPs/
 │   ├── templates/
 │   │   └── prp_base.md       # PRPs 的基礎模板
 │   └── EXAMPLE_multi_agent_prp.md  # 完整 PRP 範例
 ├── examples/                  # 您的程式碼範例（關鍵！）
-├── CLAUDE.md                 # AI 助手的全域規則
+├── GEMINI.md                 # AI 助手的全域規則
 ├── INITIAL.md               # 功能需求模板
 ├── INITIAL_EXAMPLE.md       # 功能需求範例
 └── README.md                # 此檔案
@@ -255,14 +255,14 @@ PRPs（產品需求提示）是包含以下內容的全面實現藍圖：
 
 它們類似於 PRDs（產品需求文檔），但更專門用於指導 AI 程式設計助手。
 
-在 Claude Code 中執行：
+在 Gemini CLI 中執行：
 ```bash
 /generate-prp INITIAL.md
 ```
 
-**注意：** 斜線指令是在 `.claude/commands/` 中定義的自訂指令。您可以查看它們的實現：
-- `.claude/commands/generate-prp.md` - 查看如何研究和建立 PRPs
-- `.claude/commands/execute-prp.md` - 查看如何從 PRPs 實現功能
+**注意：** 斜線指令是在 `.gemini/commands/` 中定義的自訂指令。您可以查看它們的實現：
+- `.gemini/commands/generate-prp.md` - 查看如何研究和建立 PRPs
+- `.gemini/commands/execute-prp.md` - 查看如何從 PRPs 實現功能
 
 這些指令中的 `$ARGUMENTS` 變數接收您在指令名稱後傳遞的任何內容（例如 `INITIAL.md` 或 `PRPs/your-feature.md`）。
 

@@ -101,7 +101,7 @@ wrangler types         # Generate TypeScript types from Worker configuration
 ├── package.json                # npm dependencies & scripts
 ├── tsconfig.json               # TypeScript configuration
 ├── worker-configuration.d.ts   # Generated Cloudflare types
-└── CLAUDE.md                   # This implementation guide
+└── GEMINI.md                   # This implementation guide
 ```
 
 ### Key File Purposes (ALWAYS ADD NEW FILES HERE)
@@ -228,7 +228,7 @@ export class MyMCP extends McpAgent<Env, Record<string, never>, Props> {
 wrangler dev                    # Available at http://localhost:8792/mcp
 ```
 
-### Claude Desktop Integration
+### Gemini Desktop Integration
 
 **For Local Development:**
 

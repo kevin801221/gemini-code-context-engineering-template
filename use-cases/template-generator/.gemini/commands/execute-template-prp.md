@@ -21,7 +21,7 @@ Execute a comprehensive template generation PRP to create a complete context eng
 
 3. **Generate Complete Template Package**
    - Create complete directory structure for the technology use case
-   - Generate domain-specific CLAUDE.md with global rules
+   - Generate domain-specific GEMINI.md with global rules
    - Create specialized template PRP generation and execution commands
    - Develop domain-specific base PRP template with research findings
    - Include comprehensive examples and documentation from web research
@@ -50,8 +50,8 @@ Create a complete use case template with this exact structure:
 ### Required Directory Structure
 ```
 use-cases/{technology-name}/
-├── CLAUDE.md                                    # Domain global rules
-├── .claude/commands/
+├── GEMINI.md                                    # Domain global rules
+├── .gemini/commands/
 │   ├── generate-{technology}-prp.md            # Domain PRP generation
 │   └── execute-{technology}-prp.md             # Domain PRP execution
 ├── PRPs/
@@ -66,7 +66,7 @@ use-cases/{technology-name}/
 
 ### Content Requirements Based on PRP Research
 
-**CLAUDE.md** must include (global rules for the domain):
+**GEMINI.md** must include (global rules for the domain):
 - Technology-specific tooling and package management commands
 - Domain architectural patterns and conventions
 - Framework-specific development workflow procedures
@@ -88,7 +88,7 @@ use-cases/{technology-name}/
 **Copy Script (copy_template.py)** must include:
 - Accept target directory as command line argument
 - Copy entire template directory structure to target location
-- Include ALL files: CLAUDE.md, .claude/, PRPs/, examples/, README.md
+- Include ALL files: GEMINI.md, .gemini/, PRPs/, examples/, README.md
 - Handle directory creation and error handling gracefully
 - Provide clear success feedback with next steps
 
@@ -106,11 +106,11 @@ use-cases/{technology-name}/
 ```bash
 # Verify complete structure exists
 find use-cases/{technology-name} -type f -name "*.md" | sort
-ls -la use-cases/{technology-name}/.claude/commands/
+ls -la use-cases/{technology-name}/.gemini/commands/
 ls -la use-cases/{technology-name}/PRPs/templates/
 
 # Check required files exist
-test -f use-cases/{technology-name}/CLAUDE.md
+test -f use-cases/{technology-name}/GEMINI.md
 test -f use-cases/{technology-name}/README.md
 test -f use-cases/{technology-name}/PRPs/INITIAL.md
 test -f use-cases/{technology-name}/copy_template.py
@@ -126,8 +126,8 @@ grep -r "TODO\|PLACEHOLDER\|WEBSEARCH_NEEDED" use-cases/{technology-name}/
 grep -r "{technology}" use-cases/{technology-name}/ | wc -l  # Should be 0
 
 # Verify domain-specific content exists
-grep -r "framework\|library\|technology" use-cases/{technology-name}/CLAUDE.md
-grep -r "WebSearch\|web search" use-cases/{technology-name}/.claude/commands/
+grep -r "framework\|library\|technology" use-cases/{technology-name}/GEMINI.md
+grep -r "WebSearch\|web search" use-cases/{technology-name}/.gemini/commands/
 
 # Verify README has required sections
 grep -q "Quick Start.*Copy Template" use-cases/{technology-name}/README.md
@@ -141,7 +141,7 @@ grep -q "python copy_template.py" use-cases/{technology-name}/README.md
 cd use-cases/{technology-name}
 
 # Verify commands are properly named
-ls .claude/commands/ | grep "{technology}"
+ls .gemini/commands/ | grep "{technology}"
 
 # Test INITIAL.md example exists and is comprehensive
 wc -l PRPs/INITIAL.md  # Should be substantial, not just a few lines

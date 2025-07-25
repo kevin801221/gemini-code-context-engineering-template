@@ -58,7 +58,7 @@ cd /path/to/my-agent-project
 /execute-pydantic-ai-prp PRPs/generated_prp.md
 ```
 
-如果您不使用 Claude Code，您可以簡單地告訴您的 AI 程式設計助手使用 .claude/commands 中的 generate-pydantic-ai-prp 和 execute-pydantic-ai-prp 斜線指令作為提示。
+如果您不使用 Gemini Code，您可以簡單地告訴您的 AI 程式設計助手使用 .gemini/commands 中的 generate-pydantic-ai-prp 和 execute-pydantic-ai-prp 斜線指令作為提示。
 
 ## 📖 什麼是此模板？
 
@@ -153,9 +153,9 @@ flowchart LR
 
 ```mermaid
 graph TD
-    A[pydantic-ai/] --> B[CLAUDE.md]
+    A[pydantic-ai/] --> B[GEMINI.md]
     A --> C[copy_template.py]
-    A --> D[.claude/commands/]
+    A --> D[.gemini/commands/]
     A --> E[PRPs/]
     A --> F[examples/]
     A --> G[README.md]
@@ -182,9 +182,9 @@ graph TD
 
 ```
 pydantic-ai/
-├── CLAUDE.md                           # Pydantic AI 全域開發規則
+├── GEMINI.md                           # Pydantic AI 全域開發規則
 ├── copy_template.py                    # 模板部署腳本
-├── .claude/commands/
+├── .gemini/commands/
 │   ├── generate-pydantic-ai-prp.md     # 代理的 PRP 生成
 │   └── execute-pydantic-ai-prp.md      # 代理的 PRP 執行
 ├── PRPs/
@@ -249,7 +249,7 @@ graph TB
 sequenceDiagram
     participant U as 使用者
     participant A as 基本聊天代理
-    participant M as 記憶系統
+    participant M as 記憶���統
     participant E as 環境設定
     
     U->>A: 發送訊息
@@ -298,7 +298,7 @@ graph LR
     style A fill:#e1f5fe
 ```
 
-具有工具整合能力的代理：
+具有工具整合能力的代��：
 - **環境基礎配置**（遵循 main_agent_reference）
 - **預設字串輸出**（無不必要結構）
 - 網頁搜尋和計算工具
@@ -344,7 +344,7 @@ flowchart TD
 - 展示 `result_type` 的適當使用
 - 用於業務報告的 Pydantic 驗證
 - 具有數值統計的資料分析工具
-- 何時使用結構化與字串輸出的清楚文檔
+- 何時使用結構化與字串輸出的���楚文檔
 
 ### 5. 測試範例 (`examples/testing_examples/`)
 
@@ -522,7 +522,7 @@ mindmap
 
 ## 核心需求
 - 接受城市名稱輸入
-- 調用天氣 API 獲取資料
+- 調用天��� API 獲取資料
 - 返回格式化的天氣資訊
 - 處理無效城市名稱
 ```
@@ -577,7 +577,7 @@ cd /path/to/my-agent-project
 /execute-pydantic-ai-prp PRPs/generated_prp.md
 ```
 
-If you are not using Claude Code, you can simply tell your AI coding assistant to use the generate-pydantic-ai-prp and execute-pydantic-ai-prp slash commands in .claude/commands as prompts.
+If you are not using Gemini Code, you can simply tell your AI coding assistant to use the generate-pydantic-ai-prp and execute-pydantic-ai-prp slash commands in .gemini/commands as prompts.
 
 ## 📖 What is This Template?
 
@@ -632,9 +632,9 @@ This implements the complete agent based on the PRP, including:
 
 ```
 pydantic-ai/
-├── CLAUDE.md                           # Pydantic AI global development rules
+├── GEMINI.md                           # Pydantic AI global development rules
 ├── copy_template.py                    # Template deployment script
-├── .claude/commands/
+├── .gemini/commands/
 │   ├── generate-pydantic-ai-prp.md     # PRP generation for agents
 │   └── execute-pydantic-ai-prp.md      # PRP execution for agents
 ├── PRPs/

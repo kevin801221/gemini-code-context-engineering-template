@@ -193,10 +193,10 @@ def validate_template_integrity(target_dir: Path) -> bool:
         True if template appears complete, False otherwise
     """
     essential_files = [
-        "CLAUDE.md",
+        "GEMINI.md",
         "README_TEMPLATE.md",
-        ".claude/commands/prp-mcp-create.md",
-        ".claude/commands/prp-mcp-execute.md",
+        ".gemini/commands/prp-mcp-create.md",
+        ".gemini/commands/prp-mcp-execute.md",
         "PRPs/templates/prp_mcp_base.md",
         "PRPs/INITIAL.md",
         "package.json",
@@ -259,7 +259,7 @@ def print_next_steps(target_dir: Path) -> None:
 
 6. Read the documentation:
    # Check README_TEMPLATE.md for complete usage guide
-   # Check CLAUDE.md for MCP development rules
+   # Check GEMINI.md for MCP development rules
 
 🔗 Useful Resources:
    - MCP Specification: https://spec.modelcontextprotocol.io/

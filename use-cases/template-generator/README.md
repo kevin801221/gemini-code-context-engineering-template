@@ -22,8 +22,8 @@ This meta-template generates complete context engineering template packages with
 ### Generated Template Structure
 ```
 use-cases/{technology-name}/
-├── CLAUDE.md                          # Technology-specific global rules
-├── .claude/commands/
+├── GEMINI.md                          # Technology-specific global rules
+├── .gemini/commands/
 │   ├── generate-{tech}-prp.md        # Domain PRP generation
 │   └── execute-{tech}-prp.md         # Domain PRP execution
 ├── PRPs/
@@ -98,7 +98,7 @@ This will:
 
 This will:
 - Create complete template package directory structure
-- Generate technology-specific CLAUDE.md with global rules
+- Generate technology-specific GEMINI.md with global rules
 - Create specialized PRP commands for the technology
 - Develop domain-specific base PRP template
 - Include working examples and comprehensive documentation

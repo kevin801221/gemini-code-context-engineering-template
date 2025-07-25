@@ -21,7 +21,7 @@ Generate a complete context engineering template package for **PydanticAI** that
 
 Generate a complete context engineering template package for **PydanticAI** that includes:
 
-- PydanticAI-specific CLAUDE.md implementation guide with agent patterns
+- PydanticAI-specific GEMINI.md implementation guide with agent patterns
 - Specialized PRP generation and execution commands for AI agents
 - Domain-specific base PRP template with agent architecture patterns
 - Comprehensive working examples (chat agents, tool integration, multi-step workflows)
@@ -42,8 +42,8 @@ Generate a complete context engineering template package for **PydanticAI** that
 **Complete Directory Structure:**
 ```
 use-cases/pydantic-ai/
-├── CLAUDE.md                           # PydanticAI implementation guide
-├── .claude/commands/
+├── GEMINI.md                           # PydanticAI implementation guide
+├── .gemini/commands/
 │   ├── generate-pydantic-ai-prp.md     # Agent PRP generation
 │   └── execute-pydantic-ai-prp.md      # Agent PRP execution  
 ├── PRPs/
@@ -124,20 +124,20 @@ use-cases/pydantic-ai/
 - file: ../../../README.md
   why: Core context engineering principles and workflow to adapt for AI agents
 
-- file: ../../../.claude/commands/generate-prp.md
+- file: ../../../.gemini/commands/generate-prp.md
   why: Base PRP generation patterns to specialize for PydanticAI development
 
-- file: ../../../.claude/commands/execute-prp.md  
+- file: ../../../.gemini/commands/execute-prp.md  
   why: Base PRP execution patterns to adapt for AI agent validation
 
 - file: ../../../PRPs/templates/prp_base.md
   why: Base PRP template structure to specialize for PydanticAI domain
 
 # MCP SERVER EXAMPLE - Reference implementation
-- file: ../mcp-server/CLAUDE.md
+- file: ../mcp-server/GEMINI.md
   why: Example of domain-specific implementation guide patterns
   
-- file: ../mcp-server/.claude/commands/prp-mcp-create.md
+- file: ../mcp-server/.gemini/commands/prp-mcp-create.md
   why: Example of specialized PRP generation command structure
 ```
 
@@ -148,7 +148,7 @@ use-cases/pydantic-ai/
 interface PydanticAIPatterns {
   // Core agent patterns
   agent_creation: {
-    model_providers: ["openai:gpt-4o", "anthropic:claude-3-sonnet", "google:gemini-1.5-flash"];
+    model_providers: ["openai:gpt-4o", "anthropic:claude-3-sonnet-20240229", "google:gemini-1.5-flash"];
     configuration: ["system_prompt", "deps_type", "output_type", "instructions"];
     execution_methods: ["run()", "run_sync()", "run_stream()", "iter()"];
   };
@@ -357,12 +357,12 @@ Create complete PydanticAI context engineering template based on research findin
 Generation Task 1 - Create PydanticAI Template Directory Structure:
   CREATE complete use case directory structure:
     - use-cases/pydantic-ai/
-    - .claude/commands/ with PydanticAI-specific slash commands
+    - .gemini/commands/ with PydanticAI-specific slash commands
     - PRPs/templates/ with agent-focused base template
     - examples/ with working agent implementations
     - All subdirectories per template package requirements
 
-Generation Task 2 - Generate PydanticAI-Specific CLAUDE.md:
+Generation Task 2 - Generate PydanticAI-Specific GEMINI.md:
   CREATE PydanticAI global rules file including:
     - PydanticAI agent creation and tool integration patterns
     - Model provider configuration and API key management
@@ -398,7 +398,7 @@ Generation Task 6 - Create Template Copy Script:
   CREATE Python script for template deployment:
     - copy_template.py with command-line interface
     - Copies entire PydanticAI template structure to target location
-    - Handles all files: CLAUDE.md, commands, PRPs, examples, etc.
+    - Handles all files: GEMINI.md, commands, PRPs, examples, etc.
     - Error handling and success feedback with next steps
 
 Generation Task 7 - Generate Comprehensive README:
@@ -484,7 +484,7 @@ TEMPLATE_STRUCTURE:
 ```bash
 # Verify complete PydanticAI template package structure
 find use-cases/pydantic-ai -type f | sort
-ls -la use-cases/pydantic-ai/.claude/commands/
+ls -la use-cases/pydantic-ai/.gemini/commands/
 ls -la use-cases/pydantic-ai/PRPs/templates/
 ls -la use-cases/pydantic-ai/examples/
 
@@ -536,7 +536,7 @@ python -m py_compile examples/tool_enabled_agent/agent.py 2>/dev/null && echo "T
 
 ```bash
 # Verify PydanticAI specialization maintains base framework compatibility
-diff -r ../../.claude/commands/ .claude/commands/ | head -10
+diff -r ../../.gemini/commands/ .gemini/commands/ | head -10
 grep -r "Context is King" . | wc -l  # Should inherit base principles
 grep -r "pydantic.ai.dev\|PydanticAI" . | wc -l  # Should have specializations
 
@@ -553,7 +553,7 @@ grep -r "pytest" examples/testing_examples/ | wc -l  # Should have tests
 ### PydanticAI Template Package Completeness
 
 - [ ] Complete directory structure: `tree use-cases/pydantic-ai`
-- [ ] PydanticAI-specific files: CLAUDE.md with agent patterns, specialized commands
+- [ ] PydanticAI-specific files: GEMINI.md with agent patterns, specialized commands
 - [ ] Copy script present: `copy_template.py` with proper PydanticAI functionality
 - [ ] README comprehensive: Includes agent development workflow and copy instructions
 - [ ] Agent examples working: All examples use real PydanticAI code patterns
